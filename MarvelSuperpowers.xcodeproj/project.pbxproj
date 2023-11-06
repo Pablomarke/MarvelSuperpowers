@@ -16,6 +16,10 @@
 		39F03AD12AF865A2005F271F /* MarvelSuperpowersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F03AD02AF865A2005F271F /* MarvelSuperpowersTests.swift */; };
 		39F03ADB2AF865A2005F271F /* MarvelSuperpowersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F03ADA2AF865A2005F271F /* MarvelSuperpowersUITests.swift */; };
 		39F03ADD2AF865A2005F271F /* MarvelSuperpowersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F03ADC2AF865A2005F271F /* MarvelSuperpowersUITestsLaunchTests.swift */; };
+		39F03AF32AF868AB005F271F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F03AF22AF868AB005F271F /* MainView.swift */; };
+		39F03AF52AF868C1005F271F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F03AF42AF868C1005F271F /* MainViewModel.swift */; };
+		39F03AF82AF86944005F271F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F03AF72AF86944005F271F /* DetailView.swift */; };
+		39F03AFA2AF86973005F271F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F03AF92AF86973005F271F /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		39F03AD62AF865A2005F271F /* MarvelSuperpowersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelSuperpowersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F03ADA2AF865A2005F271F /* MarvelSuperpowersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelSuperpowersUITests.swift; sourceTree = "<group>"; };
 		39F03ADC2AF865A2005F271F /* MarvelSuperpowersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelSuperpowersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		39F03AF22AF868AB005F271F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		39F03AF42AF868C1005F271F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		39F03AF72AF86944005F271F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		39F03AF92AF86973005F271F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				39F03ABA2AF8659F005F271F /* MarvelSuperpowersApp.swift */,
+				39F03AE92AF8660E005F271F /* Data */,
+				39F03AEA2AF86618005F271F /* Domain */,
+				39F03AEB2AF86620005F271F /* Presentation */,
 				39F03ABC2AF8659F005F271F /* ContentView.swift */,
 				39F03ABE2AF865A1005F271F /* Assets.xcassets */,
-				39F03AC32AF865A1005F271F /* Persistence.swift */,
 				39F03AC52AF865A1005F271F /* MarvelSuperpowers.xcdatamodeld */,
 				39F03AC02AF865A1005F271F /* Preview Content */,
 			);
@@ -131,6 +141,88 @@
 				39F03ADC2AF865A2005F271F /* MarvelSuperpowersUITestsLaunchTests.swift */,
 			);
 			path = MarvelSuperpowersUITests;
+			sourceTree = "<group>";
+		};
+		39F03AE92AF8660E005F271F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				39F03AED2AF867C8005F271F /* Local */,
+				39F03AEC2AF867BE005F271F /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		39F03AEA2AF86618005F271F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				39F03AF02AF86864005F271F /* Model */,
+				39F03AEF2AF8685A005F271F /* Extensions */,
+				39F03AEE2AF8684D005F271F /* Protocols */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		39F03AEB2AF86620005F271F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				39F03AF12AF86891005F271F /* Main */,
+				39F03AF62AF8691C005F271F /* Detail */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		39F03AEC2AF867BE005F271F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		39F03AED2AF867C8005F271F /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				39F03AC32AF865A1005F271F /* Persistence.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		39F03AEE2AF8684D005F271F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		39F03AEF2AF8685A005F271F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		39F03AF02AF86864005F271F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39F03AF12AF86891005F271F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				39F03AF22AF868AB005F271F /* MainView.swift */,
+				39F03AF42AF868C1005F271F /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		39F03AF62AF8691C005F271F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				39F03AF72AF86944005F271F /* DetailView.swift */,
+				39F03AF92AF86973005F271F /* DetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +358,11 @@
 				39F03AC72AF865A1005F271F /* MarvelSuperpowers.xcdatamodeld in Sources */,
 				39F03AC42AF865A1005F271F /* Persistence.swift in Sources */,
 				39F03ABD2AF8659F005F271F /* ContentView.swift in Sources */,
+				39F03AF82AF86944005F271F /* DetailView.swift in Sources */,
+				39F03AF32AF868AB005F271F /* MainView.swift in Sources */,
 				39F03ABB2AF8659F005F271F /* MarvelSuperpowersApp.swift in Sources */,
+				39F03AF52AF868C1005F271F /* MainViewModel.swift in Sources */,
+				39F03AFA2AF86973005F271F /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
