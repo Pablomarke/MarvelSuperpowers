@@ -8,9 +8,8 @@
 import Foundation
 
 struct CharacterResponse: Decodable {
-    
     let code:Int
-    let data: Data
+    let data: CharacterData
     let status: String
     
     enum CodingKeys: String,
@@ -34,16 +33,16 @@ struct CharacterData: Decodable {
     }
 }
 
-struct HeroeData: Decodable {
+struct HeroeData: Decodable, Identifiable {
     
     let id: Int?
     let name: String?
     let description: String?
-    let thumbnail: Thumbnail
-    let comics: Comics
-    let series: Series
-    let stories: Stories
-    let events: Events
+    let thumbnail: Thumbnail?
+  //  let comics: Comics?
+   // let series: Series?
+   // let stories: Stories?
+  //  let events: Events?
     
     enum CodingKeys: String,
                         CodingKey {
@@ -51,10 +50,10 @@ struct HeroeData: Decodable {
         case name
         case description
         case thumbnail
-        case comics
-        case series
-        case stories
-        case events
+     //   case comics
+      //  case series
+      //  case stories
+       // case events
     }
 }
 
