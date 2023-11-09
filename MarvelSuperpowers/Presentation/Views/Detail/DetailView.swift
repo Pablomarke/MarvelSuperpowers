@@ -33,8 +33,13 @@ struct DetailView: View {
             }
             
             VStack{
-                Text(model.description ?? "Sin descripción")
-                    .font(.callout)
+                if model.description == "" {
+                    Text( "No description available")
+                } else {
+                    Text(model.description ?? "Sin descripción")
+                        .font(.callout)
+                }
+                
                 Spacer()
             }
         }
