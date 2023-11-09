@@ -67,8 +67,8 @@ struct Thumbnail: Decodable {
         case extension2  = "extension"
     }
     
-    func ThumbnailComplete() -> String {
-    let totalUrl = path + "." + extension2
+    func thumbnailComplete() -> URL? {
+    let totalUrl = URL(string: "\(path).\(extension2)")
         return totalUrl
     }
 }

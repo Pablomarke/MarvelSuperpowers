@@ -13,7 +13,7 @@ struct MarvelSuperpowersApp: App {
     var body: some Scene {
         
         WindowGroup {
-            MainView(viewModel: MainViewModel())
+            MainView(viewModel: MainViewModel(testing: false))
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

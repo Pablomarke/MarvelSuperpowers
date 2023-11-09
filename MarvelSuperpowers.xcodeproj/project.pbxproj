@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39288B042AFC52FA000EDD5F /* HeroRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39288B032AFC52FA000EDD5F /* HeroRowView.swift */; };
 		39A8D3742AF93B9F0077B964 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8D3732AF93B9F0077B964 /* Networking.swift */; };
 		39BFDB532AFB1A5700A504D0 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BFDB522AFB1A5700A504D0 /* StatusModel.swift */; };
 		39F03ABB2AF8659F005F271F /* MarvelSuperpowersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F03ABA2AF8659F005F271F /* MarvelSuperpowersApp.swift */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39288B032AFC52FA000EDD5F /* HeroRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRowView.swift; sourceTree = "<group>"; };
+		39288B052AFC5976000EDD5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		39A8D3732AF93B9F0077B964 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		39BFDB522AFB1A5700A504D0 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		39F03AB72AF8659F005F271F /* MarvelSuperpowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelSuperpowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +131,7 @@
 		39F03AB92AF8659F005F271F /* MarvelSuperpowers */ = {
 			isa = PBXGroup;
 			children = (
+				39288B052AFC5976000EDD5F /* Info.plist */,
 				39F03ABA2AF8659F005F271F /* MarvelSuperpowersApp.swift */,
 				39F03AEB2AF86620005F271F /* Presentation */,
 				39F03AE92AF8660E005F271F /* Data */,
@@ -235,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				39F03AF22AF868AB005F271F /* MainView.swift */,
+				39288B032AFC52FA000EDD5F /* HeroRowView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				39F03AF32AF868AB005F271F /* MainView.swift in Sources */,
 				39F03ABB2AF8659F005F271F /* MarvelSuperpowersApp.swift in Sources */,
 				39BFDB532AFB1A5700A504D0 /* StatusModel.swift in Sources */,
+				39288B042AFC52FA000EDD5F /* HeroRowView.swift in Sources */,
 				39F03AF52AF868C1005F271F /* MainViewModel.swift in Sources */,
 				39F03AFA2AF86973005F271F /* DetailViewModel.swift in Sources */,
 				39F03AFD2AF86B48005F271F /* Character.swift in Sources */,
@@ -552,6 +558,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelSuperpowers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelSuperpowers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -580,6 +587,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelSuperpowers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelSuperpowers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
