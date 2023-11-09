@@ -20,7 +20,7 @@ struct MainView: View {
                     ForEach(heros){data in
                         NavigationLink {
                             //destino a detalle
-                            
+                            DetailView(model: data)
                         } label : {
                             HeroRowView(hero: data)
                                 .frame(height: 160)
