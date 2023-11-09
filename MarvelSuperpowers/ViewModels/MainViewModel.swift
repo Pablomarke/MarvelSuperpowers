@@ -10,7 +10,7 @@ import Combine
 
 final class MainViewModel: ObservableObject {
     @Published var heros: [HeroeData]?
-   // @Published var status = Status.none
+    @Published var status = Status.loading
     
     var suscriptors = Set<AnyCancellable>()
     
@@ -24,7 +24,7 @@ final class MainViewModel: ObservableObject {
     
     
     func getMiHeros(){
-      //  self.status = .loading
+        self.status = .loading
         
         URLSession.shared
             .dataTaskPublisher(for: Networking().getSessionHero())
@@ -44,8 +44,7 @@ final class MainViewModel: ObservableObject {
                         print("Error al recibir heroes")
                     //self.status = .error(error: "Error buscando heroes")
                 case .finished:
-                    //self.status = .loaded //Success
-                        
+                    self.status = .loaded
                         print("Heroes cargados")
                 }
             } receiveValue: { data in

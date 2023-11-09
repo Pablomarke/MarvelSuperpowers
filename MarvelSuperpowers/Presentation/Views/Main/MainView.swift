@@ -12,7 +12,7 @@ struct MainView: View {
     
     
     var body: some View {
-        Text("Listado de Heroes")
+        Text("Hero list")
         NavigationStack {
             List{
                 
