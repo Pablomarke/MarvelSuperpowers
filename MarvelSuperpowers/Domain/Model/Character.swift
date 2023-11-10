@@ -40,7 +40,7 @@ struct HeroeData: Decodable, Identifiable {
     let description: String?
     let thumbnail: Thumbnail?
   //  let comics: Comics?
-   // let series: Series?
+    let series: Series?
    // let stories: Stories?
   //  let events: Events?
     
@@ -51,7 +51,7 @@ struct HeroeData: Decodable, Identifiable {
         case description
         case thumbnail
      //   case comics
-      //  case series
+        case series
       //  case stories
        // case events
     }
@@ -99,8 +99,7 @@ struct Series: Decodable {
         case available
         case collectionURI
         case items = "items"
-        case returned
-        
+        case returned 
     }
 }
 
