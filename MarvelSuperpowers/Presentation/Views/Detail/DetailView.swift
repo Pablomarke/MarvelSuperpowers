@@ -23,7 +23,6 @@ struct DetailView: View {
                     .resizable()
                     .cornerRadius(30)
                     .opacity(0.9)
-                    
                     .aspectRatio(contentMode: .fit)
             } placeholder: {
                 Image(systemName: "photo")
@@ -39,9 +38,14 @@ struct DetailView: View {
                     Text(model.description ?? "Sin descripción")
                         .font(.callout)
                 }
-                
                 Spacer()
             }
+            HStack{
+                List{
+                    
+                }
+            }
+            
         }
     }
 }
