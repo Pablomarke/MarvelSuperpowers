@@ -22,6 +22,7 @@ final class Networking {
     let hash = HASH_KEY
     private enum endpoint {
         static let allCharacters = "/v1/public/characters"
+        static let series = "series"
     }
     
     // MARK: Errores
@@ -42,6 +43,14 @@ final class Networking {
         let urlHeroes = "\(marvelServer)\(endpoint.allCharacters)\(hash)"
         
         var request = URLRequest(url: URL(string: urlHeroes)!)
+        request.httpMethod = HTTPMethods.get
+        return request
+    }
+    
+    func getSessionSerie(id: Int) -> URLRequest {
+        let urlSeries = "\(marvelServer)\(endpoint.allCharacters)/\(id)/\(endpoint.series)\(hash)"
+        
+        var request = URLRequest(url: URL(string: urlSeries)!)
         request.httpMethod = HTTPMethods.get
         return request
     }

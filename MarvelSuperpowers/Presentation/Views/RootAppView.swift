@@ -27,8 +27,8 @@ struct RootAppView: View {
                 LoadView()
                 //TODO
                 //ErrorView(error: errorString)
-                
             }
+                
         case .loaded:
             withAnimation {
                 MainView(viewModel: MainViewModel())
@@ -39,5 +39,4 @@ struct RootAppView: View {
 
 #Preview {
     RootAppView()
-    
 }

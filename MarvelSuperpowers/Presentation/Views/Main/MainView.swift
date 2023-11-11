@@ -10,20 +10,20 @@ import SwiftUI
 struct MainView: View {
     @StateObject var viewModel: MainViewModel
     
-    
     var body: some View {
         Text("Hero list")
+            .bold()        
         NavigationStack {
             List{
                 
                 if let heros = viewModel.heros{
-                    ForEach(heros){data in
+                    ForEach(heros){ data in
                         NavigationLink {
                             //destino a detalle
-                            DetailView(model: data)
+                            DetailView(viewModel: DetailViewModel( hero: data))
                         } label : {
                             HeroRowView(hero: data)
-                                .frame(height: 160)
+                                .frame(height: 224)
                         }
                     }
                 }

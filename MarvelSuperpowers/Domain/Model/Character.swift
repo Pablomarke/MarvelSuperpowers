@@ -20,10 +20,36 @@ struct CharacterResponse: Decodable {
     }
 }
 
+struct SerieResponse: Decodable {
+    let code:Int
+    let data: SerieData
+    let status: String
+    
+    enum CodingKeys: String,
+                        CodingKey {
+        case code
+        case data
+        case status
+    }
+}
+
 struct CharacterData: Decodable {
     let total: Int
     let count: Int
     let results: [HeroeData]?
+    
+    enum CodingKeys: String,
+                        CodingKey {
+        case total
+        case count
+        case results
+    }
+}
+
+struct SerieData: Decodable {
+    let total: Int
+    let count: Int
+    let results: [SerieAData]?
     
     enum CodingKeys: String,
                         CodingKey {
@@ -57,6 +83,29 @@ struct HeroeData: Decodable, Identifiable {
     }
 }
 
+struct SerieAData: Decodable, Identifiable {
+    
+    let id: Int?
+    let title: String?
+    let description: String?
+    let thumbnail: Thumbnail?
+  //  let comics: Comics?
+    //let series: Series?
+   // let stories: Stories?
+  //  let events: Events?
+    
+    enum CodingKeys: String,
+                        CodingKey {
+        case id
+        case title
+        case description
+        case thumbnail
+     //   case comics
+      //  case series
+      //  case stories
+       // case events
+    }
+}
 struct Thumbnail: Decodable {
     let path: String
     let extension2: String

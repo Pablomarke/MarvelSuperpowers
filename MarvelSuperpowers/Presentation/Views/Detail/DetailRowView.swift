@@ -1,21 +1,20 @@
 //
-//  HeroRowView.swift
+//  DetailRowView.swift
 //  MarvelSuperpowers
 //
-//  Created by Pablo Márquez Marín on 9/11/23.
+//  Created by Pablo Márquez Marín on 10/11/23.
 //
 
 import SwiftUI
 
-struct HeroRowView: View {
+struct DetailRowView: View {
     
-    var hero: HeroeData
+    var model: SerieAData
     
     var body: some View {
         ZStack{
             //Imagen del heroe
-           
-            AsyncImage(url:  (hero.thumbnail?.thumbnailComplete())){ photo in
+            AsyncImage(url: model.thumbnail?.thumbnailComplete()){ photo in
                 photo
                     .resizable()
                     .cornerRadius(30)
@@ -34,14 +33,13 @@ struct HeroRowView: View {
                 Spacer()
                 HStack{
                     Spacer()
-                    Text(hero.name ?? "")
+                    Text(model.title ?? "No title")
                         .font(.title2)
                         .foregroundStyle(.black)
                         .bold()
                         .padding([.top, .trailing],20)
                     
                 }
-                
                 .background(.gray)
                 .cornerRadius(20)
                 .opacity(0.9)
@@ -50,7 +48,7 @@ struct HeroRowView: View {
     }
 }
 
+
 #Preview {
-    HeroRowView(hero: HeroeData(id: 1011334, name: "3-D Man", description: "", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg"), series: Series(available: 2, collectionURI: "", items: [ApiItems(resourceURI: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", name: "Serie 1")], returned: 2)))
-    
+    DetailRowView(model: SerieAData(id: 123, title: "Los vengadores", description: "Qué guay", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg")) )
 }

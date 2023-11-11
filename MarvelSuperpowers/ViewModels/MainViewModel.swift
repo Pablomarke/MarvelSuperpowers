@@ -21,8 +21,7 @@ final class MainViewModel: ObservableObject {
             getMiHeros()
         }
     }
-    
-    
+
     func getMiHeros(){
         self.status = .loading
         
@@ -44,14 +43,14 @@ final class MainViewModel: ObservableObject {
                         print("Error al recibir heroes")
                     //self.status = .error(error: "Error buscando heroes")
                 case .finished:
-                    self.status = .loaded
                         print("Heroes cargados")
                 }
             } receiveValue: { data in
                 self.heros = data.data.results
-                
+                self.status = .loaded
             }
             .store(in: &suscriptors)
+        
     }
     /*
     //for Testing and UI Development
