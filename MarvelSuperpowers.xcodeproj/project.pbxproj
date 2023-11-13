@@ -133,8 +133,8 @@
 		39BFDB552AFB1AC700A504D0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				39F03AF42AF868C1005F271F /* MainViewModel.swift */,
 				39288B082AFC7061000EDD5F /* RootViewModel.swift */,
+				39F03AF42AF868C1005F271F /* MainViewModel.swift */,
 				3967BE922AFEBE25003AC2F2 /* DetailViewModel.swift */,
 			);
 			path = ViewModels;

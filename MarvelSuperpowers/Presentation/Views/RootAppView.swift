@@ -12,25 +12,18 @@ struct RootAppView: View {
     
     var body: some View {
         switch rootViewModel.status{
-        case Status.none:
-            withAnimation {
-                MainView(viewModel: MainViewModel())
-            }
-        
-        case .loading:
-            withAnimation {
-                LoadView()
-            }
-            
-            case .error(error: _):
-            withAnimation {
-                ErrorView()
-            }
                 
-        case .loaded:
-            withAnimation {
-                MainView(viewModel: MainViewModel())
-            }
+            case .error(error: _):
+                withAnimation {
+                    ErrorView()
+                }
+                
+            case .loading(isLoading: let isLoading):
+                if isLoading {
+                    LoadView()
+                } else {
+                    MainView(viewModel: MainViewModel())
+                }
         }
     }
 }

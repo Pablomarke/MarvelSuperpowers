@@ -21,36 +21,12 @@ final class MainViewModel: ObservableObject {
             getMiHeros()
         }
     }
-
     func getMiHeros(){
-        self.status = .loading
-        
-        URLSession.shared
-            .dataTaskPublisher(for: Networking().getSessionHero())
-            .tryMap{
-                guard let response = $0.response as? HTTPURLResponse,
-                      response.statusCode == 200 else {
-                    //error
-                    throw URLError(.badServerResponse)
-                }
-                return $0.data
-            }
-            .decode(type: CharacterResponse.self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-                switch completion{
-                case .failure:
-                        print("Error al recibir heroes")
-                    //self.status = .error(error: "Error buscando heroes")
-                case .finished:
-                        print("Heroes cargados")
-                }
-            } receiveValue: { data in
-                self.heros = data.data.results
-                self.status = .loaded
+        RootViewModel().$firstHeros
+            .sink { heroes in
+                self.heros = heroes
             }
             .store(in: &suscriptors)
-        
     }
     /*
     //for Testing and UI Development
