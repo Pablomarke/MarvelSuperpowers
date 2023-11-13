@@ -1,15 +1,15 @@
 //
-//  Character.swift
+//  Serie.swift
 //  MarvelSuperpowers
 //
-//  Created by Pablo Márquez Marín on 6/11/23.
+//  Created by Pablo Márquez Marín on 14/11/23.
 //
 
 import Foundation
 
-struct CharacterResponse: Decodable {
+struct SerieResponse: Decodable {
     let code:Int
-    let data: CharacterData
+    let data: SerieData
     let status: String
     
     enum CodingKeys: String,
@@ -20,12 +20,10 @@ struct CharacterResponse: Decodable {
     }
 }
 
-
-
-struct CharacterData: Decodable {
+struct SerieData: Decodable {
     let total: Int
     let count: Int
-    let results: [HeroeData]?
+    let results: [SingleSerieData]?
     
     enum CodingKeys: String,
                         CodingKey {
@@ -35,21 +33,19 @@ struct CharacterData: Decodable {
     }
 }
 
-struct HeroeData: Decodable, Identifiable {
+struct SingleSerieData: Decodable, Identifiable {
     
     let id: Int?
-    let name: String?
+    let title: String?
     let description: String?
     let thumbnail: Thumbnail?
-    let series: MarvelItem?
-   
+  
     
     enum CodingKeys: String,
                         CodingKey {
         case id
-        case name
+        case title
         case description
         case thumbnail
-        case series
     }
 }

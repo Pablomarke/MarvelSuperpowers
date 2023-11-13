@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailRowView: View {
     
-    var model: SerieAData
+    var model: SingleSerieData
     
     var body: some View {
         ZStack{
@@ -50,7 +50,7 @@ struct DetailRowView: View {
 
 struct DetailRowView_Preview: PreviewProvider {
     static var previews: some View {
-        DetailRowView(model: SerieAData(id: 123, title: "Los vengadores", description: "Qué guay", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg")) )
+        DetailRowView(model: SingleSerieData(id: 123, title: "Los vengadores", description: "Qué guay", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg")) )
             .previewLayout(.fixed(width: 320, height: 160))
     }
 }

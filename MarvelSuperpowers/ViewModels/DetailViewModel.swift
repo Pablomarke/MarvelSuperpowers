@@ -10,11 +10,11 @@ import Combine
 
 final class DetailViewModel: ObservableObject {
     @Published var hero: HeroeData?
-    @Published var series: [SerieAData]?
+    @Published var series: [SingleSerieData]?
     
     var suscriptors = Set<AnyCancellable>()
     
-    init(testing: Bool = false, hero: HeroeData?, series: [SerieAData]? = []) {
+    init(testing: Bool = false, hero: HeroeData?, series: [SingleSerieData]? = []) {
         if (testing){
             // getHerosTesting()
         } else {

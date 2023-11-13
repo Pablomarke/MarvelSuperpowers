@@ -20,6 +20,7 @@ final class Networking {
     // MARK: - Public properties -
     let marvelServer = "https://gateway.marvel.com"
     let hash = HASH_KEY
+    
     private enum endpoint {
         static let allCharacters = "/v1/public/characters"
         static let series = "series"
@@ -41,7 +42,6 @@ final class Networking {
     // MARK: - Functions -
     func getSessionHero() -> URLRequest {
         let urlHeroes = "\(marvelServer)\(endpoint.allCharacters)\(hash)"
-        
         var request = URLRequest(url: URL(string: urlHeroes)!)
         request.httpMethod = HTTPMethods.get
         return request
