@@ -24,9 +24,7 @@ struct RootAppView: View {
             
         case .error(error: let errorString):
             withAnimation {
-                LoadView()
-                //TODO
-                //ErrorView(error: errorString)
+                ErrorView()
             }
                 
         case .loaded:
