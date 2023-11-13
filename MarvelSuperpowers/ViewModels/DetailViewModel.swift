@@ -42,12 +42,10 @@ final class DetailViewModel: ObservableObject {
                                 //self.status = .error(error: "Error al recibir los capítulos")
                             case .finished:
                                 print("Series cargadas")
-                                
                         }
                     } receiveValue: { data in
                         self.series = data.data.results ?? []
                         self.hero = hero
-                        
                     }
                     .store(in: &suscriptors)
             }

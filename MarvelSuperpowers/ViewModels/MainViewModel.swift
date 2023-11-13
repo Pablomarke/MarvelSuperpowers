@@ -10,7 +10,6 @@ import Combine
 
 final class MainViewModel: ObservableObject {
     @Published var heros: [HeroeData]?
-    @Published var status = Status.loading
     
     var suscriptors = Set<AnyCancellable>()
     
@@ -22,9 +21,27 @@ final class MainViewModel: ObservableObject {
         }
     }
     func getMiHeros(){
-        RootViewModel().$firstHeros
-            .sink { heroes in
-                self.heros = heroes
+        URLSession.shared
+            .dataTaskPublisher(for: Networking().getSessionHero())
+            .tryMap{
+                guard let response = $0.response as? HTTPURLResponse,
+                      response.statusCode == 200 else {
+                    //error
+                    throw URLError(.badServerResponse)
+                }
+                return $0.data
+            }
+            .decode(type: CharacterResponse.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                switch completion{
+                case .failure:
+                        print("Error al recibir heroes")
+                case .finished:
+                        print("Heroes cargados")
+                }
+            } receiveValue: { data in
+                self.heros = data.data.results
             }
             .store(in: &suscriptors)
     }

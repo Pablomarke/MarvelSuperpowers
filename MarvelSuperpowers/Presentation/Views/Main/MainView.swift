@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject var viewModel: MainViewModel
-    @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
         NavigationStack {
@@ -20,7 +19,6 @@ struct MainView: View {
                         NavigationLink {
                             //destino a detalle
                             DetailView(viewModel: DetailViewModel( hero: data))
-                            
                         } label : {
                             HeroRowView(hero: data)
                                 .frame(height: 224)

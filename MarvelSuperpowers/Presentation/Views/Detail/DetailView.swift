@@ -9,7 +9,6 @@ import SwiftUI
 
 struct DetailView: View {
     @StateObject var viewModel: DetailViewModel
-   @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
         VStack{
