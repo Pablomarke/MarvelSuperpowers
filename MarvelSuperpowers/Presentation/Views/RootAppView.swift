@@ -22,7 +22,7 @@ struct RootAppView: View {
                 LoadView()
             }
             
-        case .error(error: let errorString):
+            case .error(error: _):
             withAnimation {
                 ErrorView()
             }
@@ -37,4 +37,5 @@ struct RootAppView: View {
 
 #Preview {
     RootAppView()
+        .environmentObject(RootViewModel())
 }

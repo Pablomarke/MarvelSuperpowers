@@ -11,11 +11,8 @@ struct MainView: View {
     @StateObject var viewModel: MainViewModel
     
     var body: some View {
-        Text("Hero list")
-            .bold()        
         NavigationStack {
             List{
-                
                 if let heros = viewModel.heros{
                     ForEach(heros){ data in
                         NavigationLink {
@@ -25,9 +22,13 @@ struct MainView: View {
                             HeroRowView(hero: data)
                                 .frame(height: 224)
                         }
+                        .navigationTitle("Heros list")
+                        .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                        .listRowSeparator(.hidden)
                     }
                 }
             }
+            .listStyle(.plain)
         }
     }
 }

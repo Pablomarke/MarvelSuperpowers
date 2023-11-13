@@ -19,12 +19,12 @@ struct DetailRowView: View {
                     .resizable()
                     .cornerRadius(30)
                     .opacity(0.9)
-                    .frame(width: .maximum(176, 320))
+                    .frame(width: .maximum(160, 320))
                     .aspectRatio(contentMode: .fit)
             } placeholder: {
                 Image(systemName: "photo")
                     .resizable()
-                    .cornerRadius(20)
+                    .cornerRadius(30)
                     .opacity(0.8)
             }
             
@@ -36,15 +36,21 @@ struct DetailRowView: View {
                     Text(model.title ?? "No title")
                         .font(.title2)
                         .foregroundStyle(.black)
-                        .padding([.top, .trailing],20)
+                        .padding([.leading, .trailing],20)
+                        .frame(maxWidth: .infinity)
+                        .frame( height: 40)
                 }
                 .background(.gray)
-                .cornerRadius(30)
+                .cornerRadius(20)
+                .opacity(0.9)
             }
         }
     }
 }
 
-#Preview {
-    DetailRowView(model: SerieAData(id: 123, title: "Los vengadores", description: "Qué guay", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg")) )
+struct DetailRowView_Preview: PreviewProvider {
+    static var previews: some View {
+        DetailRowView(model: SerieAData(id: 123, title: "Los vengadores", description: "Qué guay", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg")) )
+            .previewLayout(.fixed(width: 320, height: 160))
+    }
 }
