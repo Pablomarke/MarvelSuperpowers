@@ -16,7 +16,7 @@ final class DetailViewModel: ObservableObject {
     
     init(testing: Bool = false, hero: HeroeData?, series: [SingleSerieData]? = []) {
         if (testing){
-            // getHerosTesting()
+             getHeroTesting()
         } else {
             if let myId = hero?.id {
                 getHeroSeries(id: myId)
@@ -49,6 +49,11 @@ final class DetailViewModel: ObservableObject {
                     }
                     .store(in: &suscriptors)
             }
+        }
+        func getHeroTesting() {
+            self.hero = HeroeData(id: 1011334, name: "3-D Man", description: "Este es el heroe mas feo que habia, pero lo escogí por ser el primero", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg"), series: MarvelItem(available: 2, collectionURI: "", items: [ApiItems(resourceURI: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", name: "Serie 1")], returned: 2))
+            let serie1 = SingleSerieData(id: 123, title: "Los vengadores", description: "Qué guay", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg"))
+            self.series = [serie1, serie1, serie1]
         }
     }
 }

@@ -15,7 +15,7 @@ final class MainViewModel: ObservableObject {
     
     init(testing: Bool = false, heros: [HeroeData]? = []){
         if (testing){
-            getHerosTesting()
+            getHerosDesign()
         } else {
             getMiHeros()
         }
@@ -45,17 +45,9 @@ final class MainViewModel: ObservableObject {
             }
             .store(in: &suscriptors)
     }
-    /*
-    //for Testing and UI Development
-    func getHerosTesting(){
-        self.status = .loading
-        self.heros =  getHerosDesign()
-        self.status = .loaded
-    }*/
-    
     
     //solo nos vale para Live Preview
-    func getHerosTesting(){
+    func getHerosDesign(){
         let thumbnail1 = Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg")
         
         let hero1 = HeroeData(id: 1011334, name: "3-D Man", description: "", thumbnail: thumbnail1, series: MarvelItem(available: 2, collectionURI: "", items: [ApiItems(resourceURI: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", name: "Serie 1")], returned: 2))

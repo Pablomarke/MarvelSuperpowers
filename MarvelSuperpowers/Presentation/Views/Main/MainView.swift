@@ -36,6 +36,6 @@ struct MainView: View {
 
 
 #Preview {
-    MainView(viewModel: MainViewModel(testing: false))
+    MainView(viewModel: MainViewModel(testing: true))
 }
 
