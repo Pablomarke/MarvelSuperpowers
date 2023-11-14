@@ -15,6 +15,7 @@
 		3967BE8F2AFE32CF003AC2F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967BE8E2AFE32CF003AC2F2 /* Constants.swift */; };
 		3967BE912AFEB6F5003AC2F2 /* DetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967BE902AFEB6F5003AC2F2 /* DetailRowView.swift */; };
 		3967BE932AFEBE25003AC2F2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967BE922AFEBE25003AC2F2 /* DetailViewModel.swift */; };
+		3989CADC2B03A2FA009EB7F8 /* MarvelSuperpowersNetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989CADB2B03A2FA009EB7F8 /* MarvelSuperpowersNetworkTest.swift */; };
 		39A8D3742AF93B9F0077B964 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8D3732AF93B9F0077B964 /* Networking.swift */; };
 		39BFDB532AFB1A5700A504D0 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BFDB522AFB1A5700A504D0 /* StatusModel.swift */; };
 		39F03ABB2AF8659F005F271F /* MarvelSuperpowersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F03ABA2AF8659F005F271F /* MarvelSuperpowersApp.swift */; };
@@ -58,6 +59,7 @@
 		3967BE8E2AFE32CF003AC2F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3967BE902AFEB6F5003AC2F2 /* DetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRowView.swift; sourceTree = "<group>"; };
 		3967BE922AFEBE25003AC2F2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		3989CADB2B03A2FA009EB7F8 /* MarvelSuperpowersNetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelSuperpowersNetworkTest.swift; sourceTree = "<group>"; };
 		39A8D3732AF93B9F0077B964 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		39BFDB522AFB1A5700A504D0 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		39F03AB72AF8659F005F271F /* MarvelSuperpowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelSuperpowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,13 @@
 				3967BE8E2AFE32CF003AC2F2 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		3989CADD2B03A592009EB7F8 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		39BFDB542AFB1AB200A504D0 /* Views */ = {
@@ -185,7 +194,9 @@
 		39F03ACF2AF865A2005F271F /* MarvelSuperpowersTests */ = {
 			isa = PBXGroup;
 			children = (
+				3989CADD2B03A592009EB7F8 /* Mocks */,
 				39F03AD02AF865A2005F271F /* MarvelSuperpowersTests.swift */,
+				3989CADB2B03A2FA009EB7F8 /* MarvelSuperpowersNetworkTest.swift */,
 			);
 			path = MarvelSuperpowersTests;
 			sourceTree = "<group>";
@@ -441,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39F03AD12AF865A2005F271F /* MarvelSuperpowersTests.swift in Sources */,
+				3989CADC2B03A2FA009EB7F8 /* MarvelSuperpowersNetworkTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
