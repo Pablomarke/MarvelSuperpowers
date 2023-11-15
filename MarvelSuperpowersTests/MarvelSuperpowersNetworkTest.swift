@@ -8,12 +8,10 @@
 import XCTest
 @testable import MarvelSuperpowers
 
-import XCTest
-
 class NetworkingTests: XCTestCase {
-    let networking = Networking()
     let networkingMock = NetworkingMock()
     
+    // MARK: - Testing llamadas -
     func testGetSessionHero() {
         let request = networkingMock.getSessionHero()
         

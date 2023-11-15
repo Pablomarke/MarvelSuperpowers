@@ -11,6 +11,7 @@
 		394BB31B2B04DF0A00A675F7 /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394BB31A2B04DF0A00A675F7 /* NetworkingProtocol.swift */; };
 		394BB31D2B04DF6400A675F7 /* NetworkingMockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394BB31C2B04DF6400A675F7 /* NetworkingMockProtocol.swift */; };
 		394BB31F2B04DF9100A675F7 /* NetworkMockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394BB31E2B04DF9100A675F7 /* NetworkMockProtocol.swift */; };
+		394BB3212B04FA0100A675F7 /* ModelsMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394BB3202B04FA0100A675F7 /* ModelsMocks.swift */; };
 		395E80502B02EDD2009AFA3A /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E804F2B02EDD2009AFA3A /* Serie.swift */; };
 		395E80522B02EE52009AFA3A /* GeneralApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E80512B02EE52009AFA3A /* GeneralApi.swift */; };
 		3967BE8F2AFE32CF003AC2F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967BE8E2AFE32CF003AC2F2 /* Constants.swift */; };
@@ -56,6 +57,7 @@
 		394BB31A2B04DF0A00A675F7 /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
 		394BB31C2B04DF6400A675F7 /* NetworkingMockProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMockProtocol.swift; sourceTree = "<group>"; };
 		394BB31E2B04DF9100A675F7 /* NetworkMockProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockProtocol.swift; sourceTree = "<group>"; };
+		394BB3202B04FA0100A675F7 /* ModelsMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsMocks.swift; sourceTree = "<group>"; };
 		395E804F2B02EDD2009AFA3A /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
 		395E80512B02EE52009AFA3A /* GeneralApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralApi.swift; sourceTree = "<group>"; };
 		3967BE8E2AFE32CF003AC2F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				394BB31E2B04DF9100A675F7 /* NetworkMockProtocol.swift */,
+				394BB3202B04FA0100A675F7 /* ModelsMocks.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				394BB31F2B04DF9100A675F7 /* NetworkMockProtocol.swift in Sources */,
+				394BB3212B04FA0100A675F7 /* ModelsMocks.swift in Sources */,
 				39F03AD12AF865A2005F271F /* MarvelSuperpowersTests.swift in Sources */,
 				3989CADC2B03A2FA009EB7F8 /* MarvelSuperpowersNetworkTest.swift in Sources */,
 			);

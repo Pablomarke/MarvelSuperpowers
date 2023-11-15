@@ -23,12 +23,12 @@ class NetworkingMock: NetworkingMockProtocol {
     
 // MARK: - Funciones que devuelven una URLRequest falsa -
     func getSessionHero() -> URLRequest {
-        let urlHeroes = URLRequest(url: URL(string: "http://example.com/mock")!)
+        let urlHeroes = URLRequest(url: URL(string: "http://MarvelApiexample.com/mock")!)
         return urlHeroes
     }
 
     func getSessionSerie(id: Int) -> URLRequest {
-        let urlSeries = URLRequest(url: URL(string: "http://example.com/mock/\(id)/series")!)
+        let urlSeries = URLRequest(url: URL(string: "http://MarvelApiexample.com/mock/\(id)/series")!)
         return urlSeries
     }
 }
