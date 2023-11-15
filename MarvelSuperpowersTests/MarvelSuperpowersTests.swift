@@ -25,6 +25,7 @@ final class MarvelSuperpowersTests: XCTestCase {
         }
     }
     
+    // MARK: - Testing Modelos -
     func testModelHeroeData() throws {
         let thumbnail1 = Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg")
         let hero1 = HeroeData(id: 1011334, name: "3-D Man", description: "No description", thumbnail: thumbnail1, series: MarvelItem(available: 2, collectionURI: "", items: [ApiItems(resourceURI: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", name: "Serie 1")], returned: 2))
@@ -49,36 +50,46 @@ final class MarvelSuperpowersTests: XCTestCase {
         XCTAssertNotNil(serie1.thumbnail?.path)
     }
     
+    // MARK: - Testing Views -
     func testMainView() throws {
         let mainView = MainView(viewModel: MainViewModel())
         XCTAssertNotNil(mainView)
         XCTAssertNotNil(MainViewModel())
+        XCTAssertNotNil(mainView.body)
         
         let mainViewTest = MainView(viewModel: MainViewModel(testing: true))
         XCTAssertNotNil(mainViewTest)
         XCTAssertNotNil(MainViewModel(testing: true))
-        
-        
+        XCTAssertNotNil(mainViewTest.body)
     }
     
     func testDetailView() throws {
         let thumbnail1 = Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg")
         let hero2 = HeroeData(id: 1011334, name: "3-D Man", description: "No description", thumbnail: thumbnail1, series: MarvelItem(available: 2, collectionURI: "", items: [ApiItems(resourceURI: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", name: "Serie 1")], returned: 2))
         
+        ///Detail view testing: false
         let detailView = DetailView(viewModel: DetailViewModel(hero: hero2))
-        XCTAssertNotNil(detailView)
-        XCTAssertNotNil(detailView.viewModel)
         
+        XCTAssertNotNil(detailView)
+        XCTAssertNotNil(DetailViewModel(hero: hero2))
+        XCTAssertNotNil(detailView.body)
+        
+        ///Detail view testing: true
         let detailViewTest = DetailView(viewModel: DetailViewModel(testing: true, hero: hero2 ))
+        
         XCTAssertNotNil(detailViewTest)
-        XCTAssertNotNil(detailViewTest.viewModel)
+        XCTAssertNotNil(DetailViewModel(testing: true, hero: hero2))
+        XCTAssertNotNil(detailViewTest.body)
     }
     
-    func testToolsViews(){
-        let load = LoadView()
-        let error = ErrorView()
+    func testDetailRowView() {
+        let serie1 = SingleSerieData(id: 123, title: "Los vengadores", description: "Qué guay", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg"))
         
-        XCTAssertNotNil(load)
-        XCTAssertNotNil(error)
+        let row = DetailRowView(model: serie1)
+        XCTAssertNotNil(row.model)
+        XCTAssertEqual(row.model.title, "Los vengadores")
+        XCTAssertNotNil(row)
+        XCTAssertNotNil(row.body)
     }
+    
 }
