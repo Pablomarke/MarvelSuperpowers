@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class Networking {
+final class Networking: NetworkingProtocol {
     
     struct HTTPMethods {
         static let post = "POST"
@@ -42,6 +42,7 @@ final class Networking {
     // MARK: - Functions -
     func getSessionHero() -> URLRequest {
         let urlHeroes = "\(marvelServer)\(endpoint.allCharacters)\(hash)"
+        
         var request = URLRequest(url: URL(string: urlHeroes)!)
         request.httpMethod = HTTPMethods.get
         return request
@@ -55,3 +56,6 @@ final class Networking {
         return request
     }
 }
+
+
+
