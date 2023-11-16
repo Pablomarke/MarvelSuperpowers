@@ -10,7 +10,7 @@ import Combine
 
 final class MainViewModel: ObservableObject {
     @Published var heros: [HeroeData]?
-    
+    @Published var MainStatus: Status = .loading
     var suscriptors = Set<AnyCancellable>()
     
     init(testing: Bool = false, heros: [HeroeData]? = []){
@@ -37,8 +37,10 @@ final class MainViewModel: ObservableObject {
                 switch completion{
                 case .failure:
                         print("Error al recibir heroes")
+                        self.MainStatus = .error
                 case .finished:
                         print("Heroes cargados")
+                        self.MainStatus = .loaded
                 }
             } receiveValue: { data in
                 self.heros = data.data.results

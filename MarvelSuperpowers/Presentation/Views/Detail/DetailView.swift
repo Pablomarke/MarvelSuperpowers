@@ -14,8 +14,6 @@ struct DetailView: View {
         if viewModel.isLoading {
             LoadView()
         } else {
-            
-            
             VStack{
                 HStack{
                     ///Imagen
