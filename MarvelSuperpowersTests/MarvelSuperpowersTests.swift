@@ -82,6 +82,16 @@ final class MarvelSuperpowersTests: XCTestCase {
         XCTAssertNotNil(detailViewTest.body)
     }
     
+    func testToolViews(){
+       let errorV = ErrorView()
+        let loadV = LoadView()
+        
+        XCTAssertNotNil(errorV.body)
+        XCTAssertNotNil(errorV)
+        XCTAssertNotNil(loadV)
+        XCTAssertNotNil(loadV.body)
+    }
+    
     // MARK: - Celda detail -
     func testDetailRowView() {
         let serie1 = modelsMock.serie
