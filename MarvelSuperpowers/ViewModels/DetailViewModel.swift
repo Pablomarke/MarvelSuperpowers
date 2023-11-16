@@ -29,6 +29,7 @@ final class DetailViewModel: ObservableObject {
                         guard let response = $0.response as? HTTPURLResponse,
                               response.statusCode == 200 else {
                             //error
+                            self.detailStatus = .error
                             throw URLError(.badServerResponse)
                         }
                         return $0.data

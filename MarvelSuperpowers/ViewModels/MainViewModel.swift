@@ -27,6 +27,7 @@ final class MainViewModel: ObservableObject {
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {
                     //error
+                    self.MainStatus = .error
                     throw URLError(.badServerResponse)
                 }
                 return $0.data
