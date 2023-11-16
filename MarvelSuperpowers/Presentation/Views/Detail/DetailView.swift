@@ -11,8 +11,10 @@ struct DetailView: View {
     @StateObject var viewModel: DetailViewModel
     
     var body: some View {
-        if viewModel.isLoading {
+        if viewModel.detailStatus == .loading {
             LoadView()
+        } else if viewModel.detailStatus == . error {
+            ErrorView()
         } else {
             VStack{
                 HStack{
