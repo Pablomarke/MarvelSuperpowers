@@ -20,6 +20,8 @@
 		3989CADC2B03A2FA009EB7F8 /* MarvelSuperpowersNetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989CADB2B03A2FA009EB7F8 /* MarvelSuperpowersNetworkTest.swift */; };
 		39A8D3742AF93B9F0077B964 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8D3732AF93B9F0077B964 /* Networking.swift */; };
 		39BFDB532AFB1A5700A504D0 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BFDB522AFB1A5700A504D0 /* StatusModel.swift */; };
+		39C251312B06204E007CE9CD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 39C251302B06204E007CE9CD /* Localizable.xcstrings */; };
+		39ED707B2B053292001C8605 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED707A2B053292001C8605 /* LoadView.swift */; };
 		39F03ABB2AF8659F005F271F /* MarvelSuperpowersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F03ABA2AF8659F005F271F /* MarvelSuperpowersApp.swift */; };
 		39F03ABF2AF865A1005F271F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F03ABE2AF865A1005F271F /* Assets.xcassets */; };
 		39F03AC22AF865A1005F271F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F03AC12AF865A1005F271F /* Preview Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		3989CADB2B03A2FA009EB7F8 /* MarvelSuperpowersNetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelSuperpowersNetworkTest.swift; sourceTree = "<group>"; };
 		39A8D3732AF93B9F0077B964 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		39BFDB522AFB1A5700A504D0 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		39C251302B06204E007CE9CD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		39ED707A2B053292001C8605 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		39F03AB72AF8659F005F271F /* MarvelSuperpowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelSuperpowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F03ABA2AF8659F005F271F /* MarvelSuperpowersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelSuperpowersApp.swift; sourceTree = "<group>"; };
 		39F03ABE2AF865A1005F271F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			children = (
 				39F03AF12AF86891005F271F /* Main */,
 				39F03AF62AF8691C005F271F /* Detail */,
+				39C251322B062551007CE9CD /* Tools Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +146,14 @@
 				3967BE922AFEBE25003AC2F2 /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		39C251322B062551007CE9CD /* Tools Views */ = {
+			isa = PBXGroup;
+			children = (
+				39ED707A2B053292001C8605 /* LoadView.swift */,
+			);
+			path = "Tools Views";
 			sourceTree = "<group>";
 		};
 		39F03AAE2AF8659F005F271F = {
@@ -166,6 +179,7 @@
 		39F03AB92AF8659F005F271F /* MarvelSuperpowers */ = {
 			isa = PBXGroup;
 			children = (
+				39C251302B06204E007CE9CD /* Localizable.xcstrings */,
 				39288B052AFC5976000EDD5F /* Info.plist */,
 				39F03ABA2AF8659F005F271F /* MarvelSuperpowersApp.swift */,
 				39F03AEB2AF86620005F271F /* Presentation */,
@@ -381,6 +395,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 39F03AAE2AF8659F005F271F;
 			productRefGroup = 39F03AB82AF8659F005F271F /* Products */;
@@ -400,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39F03AC22AF865A1005F271F /* Preview Assets.xcassets in Resources */,
+				39C251312B06204E007CE9CD /* Localizable.xcstrings in Resources */,
 				39F03ABF2AF865A1005F271F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +453,7 @@
 				3967BE912AFEB6F5003AC2F2 /* DetailRowView.swift in Sources */,
 				395E80522B02EE52009AFA3A /* GeneralApi.swift in Sources */,
 				39288B042AFC52FA000EDD5F /* HeroRowView.swift in Sources */,
+				39ED707B2B053292001C8605 /* LoadView.swift in Sources */,
 				39F03AF52AF868C1005F271F /* MainViewModel.swift in Sources */,
 				3967BE8F2AFE32CF003AC2F2 /* Constants.swift in Sources */,
 				39F03AFD2AF86B48005F271F /* Character.swift in Sources */,

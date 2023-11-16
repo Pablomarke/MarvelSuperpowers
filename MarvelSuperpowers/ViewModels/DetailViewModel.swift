@@ -11,7 +11,7 @@ import Combine
 final class DetailViewModel: ObservableObject {
     @Published var hero: HeroeData?
     @Published var series: [SingleSerieData]?
-    
+    var isLoading: Bool = true
     var suscriptors = Set<AnyCancellable>()
     
     init(testing: Bool = false, hero: HeroeData?, series: [SingleSerieData]? = []) {
@@ -42,6 +42,7 @@ final class DetailViewModel: ObservableObject {
                                 //self.status = .error(error: "Error al recibir los capítulos")
                             case .finished:
                                 print("Series cargadas")
+                                self.isLoading = false
                         }
                     } receiveValue: { data in
                         self.series = data.data.results ?? []

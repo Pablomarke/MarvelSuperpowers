@@ -10,11 +10,11 @@ import SwiftUI
 struct MainView: View {
     @StateObject var viewModel: MainViewModel
     
+    
     var body: some View {
         NavigationStack {
             List{
                 if let heros = viewModel.heros{
-                    
                     ForEach(heros){ data in
                         NavigationLink {
                             //destino a detalle
@@ -23,7 +23,7 @@ struct MainView: View {
                             HeroRowView(hero: data)
                                 .frame(height: 224)
                         }
-                        .navigationTitle("Heros list")
+                        .navigationTitle("Heroes and villains")
                         .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
                         .listRowSeparator(.hidden)
                     }
@@ -34,8 +34,9 @@ struct MainView: View {
     }
 }
 
-
 #Preview {
     MainView(viewModel: MainViewModel(testing: true))
+        //.environment(\.locale, .init(identifier: "es"))
+       
 }
 
