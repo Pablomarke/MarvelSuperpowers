@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Serie response -
 struct SerieResponse: Decodable {
     let code:Int
     let data: SerieData
@@ -33,6 +34,7 @@ struct SerieData: Decodable {
     }
 }
 
+// MARK: - Series -
 struct SingleSerieData: Decodable, Identifiable {
     
     let id: Int?
@@ -40,7 +42,6 @@ struct SingleSerieData: Decodable, Identifiable {
     let description: String?
     let thumbnail: Thumbnail?
   
-    
     enum CodingKeys: String,
                         CodingKey {
         case id

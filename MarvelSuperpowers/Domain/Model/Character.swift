@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Heroes response-
 struct CharacterResponse: Decodable {
     let code:Int
     let data: CharacterData
@@ -19,8 +20,6 @@ struct CharacterResponse: Decodable {
         case status
     }
 }
-
-
 
 struct CharacterData: Decodable {
     let total: Int
@@ -35,15 +34,14 @@ struct CharacterData: Decodable {
     }
 }
 
+// MARK: - Heroes -
 struct HeroeData: Decodable, Identifiable {
-    
     let id: Int?
     let name: String?
     let description: String?
     let thumbnail: Thumbnail?
     let series: MarvelItem?
    
-    
     enum CodingKeys: String,
                         CodingKey {
         case id

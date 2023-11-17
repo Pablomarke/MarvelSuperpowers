@@ -8,36 +8,10 @@
 import Foundation
 
 final class Networking: NetworkingProtocol {
-    
-    struct HTTPMethods {
-        static let post = "POST"
-        static let get = "GET"
-        static let put = "PUT"
-        static let delete = "DELETE"
-        
-    }
-    
+
     // MARK: - Public properties -
     let marvelServer = "https://gateway.marvel.com"
     let hash = HASH_KEY
-    
-    private enum endpoint {
-        static let allCharacters = "/v1/public/characters"
-        static let series = "series"
-    }
-    
-    // MARK: Errores
-    enum NetworkError: Error {
-        case unknown
-        case malformedUrl
-        case loginString
-        case encodingfailed
-        case decodingFailed
-        case noData
-        case statusCode(code: Int?)
-        case noToken
-        case httpError
-    }
     
     // MARK: - Functions -
     func getSessionHero() -> URLRequest {

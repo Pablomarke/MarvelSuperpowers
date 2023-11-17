@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - General api images -
 struct Thumbnail: Decodable {
     let path: String
     let extension2: String
@@ -23,6 +24,7 @@ struct Thumbnail: Decodable {
     }
 }
 
+// MARK: - Items -
 struct MarvelItem: Decodable {
     let available: Int
     let collectionURI: String
