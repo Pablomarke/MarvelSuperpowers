@@ -12,7 +12,6 @@ struct LaunchView: View {
         ZStack{
             Image("redwall")
                 .resizable()
-                .opacity(0.8)
                .edgesIgnoringSafeArea(.all)
             ZStack{
                 

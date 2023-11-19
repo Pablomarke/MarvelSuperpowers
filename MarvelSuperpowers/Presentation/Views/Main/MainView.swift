@@ -17,7 +17,7 @@ struct MainView: View {
             LaunchView()
         } else if viewModel.MainStatus == .loaded {
             NavigationStack {
-                List{
+                ScrollView{
                     if let heros = viewModel.heros{
                         ForEach(heros){ data in
                             NavigationLink {
@@ -28,16 +28,23 @@ struct MainView: View {
                                     .frame(height: 224)
                             }
                         }
-                        .navigationTitle("Heroes and villains")
-                        .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-                        .listRowSeparator(.hidden)
                     }
                 }
-                .listStyle(.plain)
+                .navigationTitle("Heroes and villains")
+                .padding()
+                .ignoresSafeArea(edges: .bottom)
+                    .background(Image("redwall")
+                        .resizable()
+                        .opacity(0.8)
+                       .edgesIgnoringSafeArea(.all)
+                    )
+                    
             }
+            
         }
     }
 }
+
 #Preview {
     MainView(viewModel: MainViewModel(testing: true))
         //.environment(\.locale, .init(identifier: "es"))

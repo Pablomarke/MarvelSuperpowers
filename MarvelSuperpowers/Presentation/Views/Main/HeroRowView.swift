@@ -14,7 +14,6 @@ struct HeroRowView: View {
     var body: some View {
         ZStack{
             //Imagen del heroe
-           
             AsyncImage(url:  (hero.thumbnail?.thumbnailComplete())){ photo in
                 photo
                     .resizable()
