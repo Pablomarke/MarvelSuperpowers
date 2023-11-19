@@ -27,7 +27,7 @@ struct DetailRowView: View {
                     .cornerRadius(30)
                     .opacity(0.8)
             }
-            
+            .background(.clear)
             VStack{
                 ///Nombre
                 Spacer()
@@ -35,16 +35,18 @@ struct DetailRowView: View {
                     Spacer()
                     Text(model.title ?? "No title")
                         .font(.title2)
-                        .foregroundStyle(.black)
+                        .foregroundStyle(.white)
                         .padding([.leading, .trailing],20)
                         .frame(maxWidth: .infinity)
-                        .frame( height: 40)
+                        
                 }
-                .background(.gray)
+                .frame( height: 40)
+                .background(.red)
                 .cornerRadius(20)
                 .opacity(0.9)
             }
         }
+      //  .presentationCornerRadius(30)
     }
 }
 

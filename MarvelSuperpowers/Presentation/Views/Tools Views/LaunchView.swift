@@ -19,7 +19,6 @@ struct LaunchView: View {
                     Spacer()
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                               
                                .scaleEffect(6.0, anchor: .center)
                                .padding()
                          Spacer()

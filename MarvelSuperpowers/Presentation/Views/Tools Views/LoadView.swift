@@ -9,20 +9,26 @@ import SwiftUI
 
 struct LoadView: View {
     var body: some View {
-        Spacer()
         VStack{
+            Spacer()
             Text("Loading...")
                 .font(.largeTitle)
-                .foregroundStyle(.gray)
+                .foregroundStyle(.white)
             
             ProgressView()
-                       .progressViewStyle(CircularProgressViewStyle())
+                .progressViewStyle(CircularProgressViewStyle(tint: .white))
                        .scaleEffect(2.0, anchor: .center)
-                       .padding()
+            Spacer()
         }
-        Spacer()
+        .frame(maxWidth: .infinity)
+        .background(Image("redwall")
+            .resizable()
+            .opacity(0.8)
+           .edgesIgnoringSafeArea(.all)
+        )
     }
 }
+
 #Preview {
     LoadView()
 }

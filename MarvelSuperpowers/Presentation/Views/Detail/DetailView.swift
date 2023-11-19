@@ -37,32 +37,41 @@ struct DetailView: View {
                     if viewModel.hero?.description == "" {
                         Text( "No description available")
                     } else {
-                        TextEditor(text: .constant(viewModel.hero?.description ?? "No description available"))
+                        ScrollView{
+                            Text(viewModel.hero?.description ?? "No description available")
+                                .background(Color.clear)
+                                .foregroundColor(Color.white)
+                        }
                     }
                 }
                 .frame(height: 160)
                 
                 VStack{
-                    List{
+                    ScrollView{
                         Text("Series")
                             .font(.title2)
+                            .foregroundColor(Color.white)
                         if let series = viewModel.series{
                             if series.isEmpty {
                                 Text ("No series available")
                             } else {
                                 ForEach(series){ serie in
                                     DetailRowView(model: serie)
-                                        .frame(height: 160)
-                                        .background(.white)
+                                        .frame( height: 224)
                                 }
                             }
                         }
                     }
-                    .listStyle(.inset)
                 }
             }
             .padding()
-            .navigationTitle(viewModel.hero?.name ?? "Unknown Hero")
+            .navigationBarTitle(viewModel.hero?.name ?? "Unknown Hero", displayMode: .inline)
+            .background(Image("redwall")
+                .resizable()
+                .opacity(0.8)
+               .edgesIgnoringSafeArea(.all)
+            )
+            .ignoresSafeArea(edges: .bottom)
         }
     }
 }

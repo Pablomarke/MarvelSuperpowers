@@ -22,7 +22,7 @@ struct MainView: View {
                         ForEach(heros){ data in
                             NavigationLink {
                                 //destino a detalle
-                                DetailView(viewModel: DetailViewModel( hero: data))
+                                    DetailView(viewModel: DetailViewModel( hero: data))
                             } label : {
                                 HeroRowView(hero: data)
                                     .frame(height: 224)
