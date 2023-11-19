@@ -14,7 +14,7 @@ struct MainView: View {
         if viewModel.MainStatus == .error {
             ErrorView()
         } else if viewModel.MainStatus == .loading {
-            LoadView()
+            LaunchView()
         } else if viewModel.MainStatus == .loaded {
             NavigationStack {
                 List{

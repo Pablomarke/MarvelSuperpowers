@@ -35,7 +35,8 @@ struct SerieData: Decodable {
 }
 
 // MARK: - Series -
-struct SingleSerieData: Decodable, Identifiable {
+struct SingleSerieData: Decodable, 
+                            Identifiable {
     
     let id: Int?
     let title: String?

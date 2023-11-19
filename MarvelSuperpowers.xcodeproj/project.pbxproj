@@ -12,6 +12,7 @@
 		393C86282B079C850094368F /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C86272B079C850094368F /* NetworkConstants.swift */; };
 		393C862A2B07A0BE0094368F /* MainViewModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C86292B07A0BE0094368F /* MainViewModelExtension.swift */; };
 		393C862C2B07A15F0094368F /* DetailViewModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C862B2B07A15F0094368F /* DetailViewModelExtension.swift */; };
+		393C862E2B07A6840094368F /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C862D2B07A6840094368F /* LaunchView.swift */; };
 		394BB31B2B04DF0A00A675F7 /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394BB31A2B04DF0A00A675F7 /* NetworkingProtocol.swift */; };
 		394BB31D2B04DF6400A675F7 /* NetworkingMockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394BB31C2B04DF6400A675F7 /* NetworkingMockProtocol.swift */; };
 		394BB31F2B04DF9100A675F7 /* NetworkMockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394BB31E2B04DF9100A675F7 /* NetworkMockProtocol.swift */; };
@@ -65,6 +66,7 @@
 		393C86272B079C850094368F /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		393C86292B07A0BE0094368F /* MainViewModelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelExtension.swift; sourceTree = "<group>"; };
 		393C862B2B07A15F0094368F /* DetailViewModelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelExtension.swift; sourceTree = "<group>"; };
+		393C862D2B07A6840094368F /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		394BB31A2B04DF0A00A675F7 /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
 		394BB31C2B04DF6400A675F7 /* NetworkingMockProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMockProtocol.swift; sourceTree = "<group>"; };
 		394BB31E2B04DF9100A675F7 /* NetworkMockProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockProtocol.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				39ED707A2B053292001C8605 /* LoadView.swift */,
 				39C251332B062BFA007CE9CD /* ErrorView.swift */,
+				393C862D2B07A6840094368F /* LaunchView.swift */,
 			);
 			path = "Tools Views";
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				393C86282B079C850094368F /* NetworkConstants.swift in Sources */,
+				393C862E2B07A6840094368F /* LaunchView.swift in Sources */,
 				39F03AC72AF865A1005F271F /* MarvelSuperpowers.xcdatamodeld in Sources */,
 				394BB31D2B04DF6400A675F7 /* NetworkingMockProtocol.swift in Sources */,
 				39C251342B062BFA007CE9CD /* ErrorView.swift in Sources */,
