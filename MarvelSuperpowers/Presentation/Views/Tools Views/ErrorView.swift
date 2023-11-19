@@ -19,9 +19,18 @@ struct ErrorView: View {
             Text("ERROR!")
                 .bold()
                 .foregroundStyle(.red)
+                .font(.largeTitle)
             Spacer()
         }
+        .frame(maxWidth: .infinity)
+        .background(Image("wall1")
+            .resizable()
+        .opacity(0.8)
+        .edgesIgnoringSafeArea(.all)
+        
+        )
     }
+        
 }
 
 #Preview {
