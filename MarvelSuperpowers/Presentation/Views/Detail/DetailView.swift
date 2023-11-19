@@ -36,6 +36,7 @@ struct DetailView: View {
                     ///Descripción
                     if viewModel.hero?.description == "" {
                         Text( "No description available")
+                            .foregroundColor(Color.white)
                     } else {
                         ScrollView{
                             Text(viewModel.hero?.description ?? "No description available")

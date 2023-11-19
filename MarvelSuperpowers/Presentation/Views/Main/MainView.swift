@@ -30,7 +30,7 @@ struct MainView: View {
                         }
                     }
                 }
-                .navigationTitle("Heroes and villains")
+                .navigationBarTitle("Heroes and villains").tint(Color.clear)
                 .padding()
                 .ignoresSafeArea(edges: .bottom)
                     .background(Image("redwall")

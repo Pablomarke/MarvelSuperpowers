@@ -46,7 +46,6 @@ struct DetailRowView: View {
                 .opacity(0.9)
             }
         }
-      //  .presentationCornerRadius(30)
     }
 }
 
