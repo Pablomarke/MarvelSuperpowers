@@ -102,4 +102,10 @@ final class MarvelSuperpowersTests: XCTestCase {
         XCTAssertNotNil(row)
         XCTAssertNotNil(row.body)
     }
+    
+    func testLaunchScreen() {
+        let launch = LaunchView()
+        XCTAssertNotNil(launch)
+        XCTAssertNotNil(launch.body)
+    }
 }
