@@ -19,6 +19,7 @@ struct LoadView: View {
                 .progressViewStyle(CircularProgressViewStyle(tint: .white))
                        .scaleEffect(2.0, anchor: .center)
             Spacer()
+                .navigationBarBackButtonHidden()
         }
         .frame(maxWidth: .infinity)
         .background(Image("redwall")
