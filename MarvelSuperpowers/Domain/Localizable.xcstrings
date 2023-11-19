@@ -2,7 +2,14 @@
   "sourceLanguage" : "en",
   "strings" : {
     "ERROR!" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ERROR!"
+          }
+        }
+      }
     },
     "Heroes and villains" : {
       "localizations" : {
@@ -15,7 +22,14 @@
       }
     },
     "Loading Heroes..." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando heroes..."
+          }
+        }
+      }
     },
     "Loading..." : {
       "localizations" : {
