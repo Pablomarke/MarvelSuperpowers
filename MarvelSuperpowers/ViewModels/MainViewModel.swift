@@ -18,6 +18,7 @@ final class MainViewModel: ObservableObject {
     init(testing: Bool = false, heros: [HeroeData]? = []){
         if (testing){
             getFakeHerosForDesignAndtesting()
+            self.MainStatus = .loaded
         } else {
             getMiHeros()
         }

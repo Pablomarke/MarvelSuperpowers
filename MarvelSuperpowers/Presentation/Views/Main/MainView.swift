@@ -27,10 +27,10 @@ struct MainView: View {
                                 HeroRowView(hero: data)
                                     .frame(height: 224)
                             }
-                            .navigationTitle("Heroes and villains")
-                            .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-                            .listRowSeparator(.hidden)
                         }
+                        .navigationTitle("Heroes and villains")
+                        .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                        .listRowSeparator(.hidden)
                     }
                 }
                 .listStyle(.plain)

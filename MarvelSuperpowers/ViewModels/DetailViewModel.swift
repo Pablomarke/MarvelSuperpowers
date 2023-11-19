@@ -19,6 +19,7 @@ final class DetailViewModel: ObservableObject {
     init(testing: Bool = false, hero: HeroeData?, series: [SingleSerieData]? = []) {
         if (testing){
             getFakeHeroandSeriesForDesignAndtesting()
+            self.detailStatus = .loaded
         } else {
             if let myId = hero?.id {
                 getHeroSeries(id: myId)
