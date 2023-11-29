@@ -11,43 +11,44 @@ struct MainView: View {
     @StateObject var viewModel: MainViewModel
     
     var body: some View {
-        if viewModel.MainStatus == .error {
-            ErrorView()
-        } else if viewModel.MainStatus == .loading {
-            LaunchView()
-        } else if viewModel.MainStatus == .loaded {
-            NavigationStack {
-                ScrollView{
-                    if let heros = viewModel.heros{
-                        ForEach(heros){ data in
-                            NavigationLink {
-                                //destino a detalle
+        switch viewModel.MainStatus {
+            case .error :
+                ErrorView()
+            case .loading :
+                LaunchView()
+            case .loaded :
+                NavigationStack {
+                    ScrollView{
+                        if let heros = viewModel.heros{
+                            ForEach(heros){ data in
+                                NavigationLink {
+                                    //destino a detalle
                                     DetailView(viewModel: DetailViewModel( hero: data))
-                            } label : {
-                                HeroRowView(hero: data)
-                                    .frame(height: 224)
+                                } label : {
+                                    HeroRowView(hero: data)
+                                        .frame(height: 224)
+                                }
                             }
                         }
                     }
-                }
-                .navigationBarTitle("Heroes and villains").tint(Color.clear)
-                .padding()
-                .ignoresSafeArea(edges: .bottom)
+                    .navigationBarTitle("Heroes and villains").tint(Color.clear)
+                    .padding()
+                    .ignoresSafeArea(edges: .bottom)
                     .background(Image("redwall")
                         .resizable()
                         .opacity(0.8)
-                       .edgesIgnoringSafeArea(.all)
+                        .edgesIgnoringSafeArea(.all)
                     )
                     
-            }
-            
+                }
+                
         }
     }
 }
 
 #Preview {
     MainView(viewModel: MainViewModel(testing: true))
-        //.environment(\.locale, .init(identifier: "es"))
-       
+    //.environment(\.locale, .init(identifier: "es"))
+    
 }
 

@@ -11,68 +11,69 @@ struct DetailView: View {
     @StateObject var viewModel: DetailViewModel
     
     var body: some View {
-        if viewModel.detailStatus == .loading {
-            LoadView()
-        } else if viewModel.detailStatus == . error {
-            ErrorView()
-        } else {
-            VStack{
-                HStack{
-                    ///Imagen
-                    AsyncImage(url: (viewModel.hero?.thumbnail?.thumbnailComplete())){ photo in
-                        photo
-                            .resizable()
-                            .frame(width: 160, height: 160, alignment: .center)
-                            .cornerRadius(30)
-                            .opacity(0.9)
-                            .aspectRatio(contentMode: .fit)
-                    } placeholder: {
-                        Image(systemName: "photo")
-                            .resizable()
-                            .cornerRadius(20)
-                            .opacity(0.8)
-                    }
-                    
-                    ///Descripción
-                    if viewModel.hero?.description == "" {
-                        Text( "No description available")
-                            .foregroundColor(Color.white)
-                    } else {
-                        ScrollView{
-                            Text(viewModel.hero?.description ?? "No description available")
-                                .background(Color.clear)
+        switch viewModel.detailStatus {
+            case .loading :
+                LoadView()
+            case .error :
+                ErrorView()
+            default:
+                VStack{
+                    HStack{
+                        ///Imagen
+                        AsyncImage(url: (viewModel.hero?.thumbnail?.thumbnailComplete())){ photo in
+                            photo
+                                .resizable()
+                                .frame(width: 160, height: 160, alignment: .center)
+                                .cornerRadius(30)
+                                .opacity(0.9)
+                                .aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            Image(systemName: "photo")
+                                .resizable()
+                                .cornerRadius(20)
+                                .opacity(0.8)
+                        }
+                        
+                        ///Descripción
+                        if viewModel.hero?.description == "" {
+                            Text( "No description available")
                                 .foregroundColor(Color.white)
+                        } else {
+                            ScrollView{
+                                Text(viewModel.hero?.description ?? "No description available")
+                                    .background(Color.clear)
+                                    .foregroundColor(Color.white)
+                            }
                         }
                     }
-                }
-                .frame(height: 160)
-                
-                VStack{
-                    ScrollView{
-                        Text("Series")
-                            .font(.title2)
-                            .foregroundColor(Color.white)
-                        if let series = viewModel.series{
-                            if series.isEmpty {
-                                Text ("No series available")
-                            } else {
-                                ForEach(series){ serie in
-                                    DetailRowView(model: serie)
-                                        .frame( height: 224)
+                    .frame(height: 160)
+                    
+                    VStack{
+                        ScrollView{
+                            Text("Series")
+                                .font(.title2)
+                                .foregroundColor(Color.white)
+                            if let series = viewModel.series{
+                                if series.isEmpty {
+                                    Text ("No series available")
+                                } else {
+                                    ForEach(series){ serie in
+                                        DetailRowView(model: serie)
+                                            .frame( height: 224)
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
-            .padding()
-            .navigationBarTitle(viewModel.hero?.name ?? "Unknown Hero", displayMode: .inline)
-            .background(Image("redwall")
-                .resizable()
-                .opacity(0.8)
-               .edgesIgnoringSafeArea(.all)
-            )
-            .ignoresSafeArea(edges: .bottom)
+                .padding()
+                .navigationBarTitle(viewModel.hero?.name ?? "Unknown Hero", displayMode: .inline)
+                .background(Image("redwall")
+                    .resizable()
+                    .opacity(0.8)
+                    .edgesIgnoringSafeArea(.all)
+                )
+                .ignoresSafeArea(edges: .bottom)
         }
     }
 }
