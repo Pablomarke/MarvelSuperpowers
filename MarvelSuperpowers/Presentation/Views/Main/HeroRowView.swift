@@ -11,6 +11,7 @@ struct HeroRowView: View {
     
     var hero: HeroeData
     
+    //MARK: - View -
     var body: some View {
         ZStack{
             //Imagen del heroe

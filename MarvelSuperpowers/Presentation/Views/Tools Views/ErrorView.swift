@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ErrorView: View {
+    
+    //MARK: - View -
     var body: some View {
         VStack{
             Spacer()

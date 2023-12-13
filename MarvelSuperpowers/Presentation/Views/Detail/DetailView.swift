@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView: View {
     @StateObject var viewModel: DetailViewModel
     
+    //MARK: - View -
     var body: some View {
         switch viewModel.detailStatus {
             case .loading :

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LaunchView: View {
+    
+    //MARK: - View -
     var body: some View {
         ZStack{
             Image("redwall")
