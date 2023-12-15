@@ -37,7 +37,8 @@ final class MainViewModel: ObservableObject {
                 }
                 return $0.data
             }
-            .decode(type: CharacterResponse.self, decoder: JSONDecoder())
+            .decode(type: CharacterResponse.self, 
+                    decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion{
