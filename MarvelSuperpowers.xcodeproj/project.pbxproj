@@ -298,10 +298,10 @@
 		39F03AF02AF86864005F271F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				395E80512B02EE52009AFA3A /* GeneralApi.swift */,
 				39F03AFC2AF86B48005F271F /* Character.swift */,
 				395E804F2B02EDD2009AFA3A /* Serie.swift */,
 				39BFDB522AFB1A5700A504D0 /* StatusModel.swift */,
-				395E80512B02EE52009AFA3A /* GeneralApi.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

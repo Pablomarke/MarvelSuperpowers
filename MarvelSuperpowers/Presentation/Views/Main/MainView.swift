@@ -19,7 +19,7 @@ struct MainView: View {
             case .loaded :
                 NavigationStack {
                     ScrollView{
-                        if let heros = viewModel.heros{
+                        if let heros = viewModel.heroes{
                             ForEach(heros){ data in
                                 NavigationLink {
                                     //destino a detalle

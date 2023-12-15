@@ -21,10 +21,12 @@ struct SerieResponse: Decodable {
     }
 }
 
+typealias VariousSerieData = [SingleSerieData]
+
 struct SerieData: Decodable {
     let total: Int
     let count: Int
-    let results: [SingleSerieData]?
+    let results: VariousSerieData?
     
     enum CodingKeys: String,
                         CodingKey {

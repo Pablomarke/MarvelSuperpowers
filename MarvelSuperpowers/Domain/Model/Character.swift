@@ -24,7 +24,7 @@ struct CharacterResponse: Decodable {
 struct CharacterData: Decodable {
     let total: Int
     let count: Int
-    let results: [HeroeData]?
+    let results: HeroesData?
     
     enum CodingKeys: String,
                         CodingKey {
@@ -35,6 +35,8 @@ struct CharacterData: Decodable {
 }
 
 // MARK: - Heroes -
+typealias HeroesData = [HeroeData]
+
 struct HeroeData: Decodable, Identifiable {
     let id: Int?
     let name: String?

@@ -11,12 +11,12 @@ import Combine
 final class DetailViewModel: ObservableObject {
     // MARK: - Properties -
     @Published var hero: HeroeData?
-    @Published var series: [SingleSerieData]?
+    @Published var series: VariousSerieData?
     @Published var detailStatus: Status = .loading
     var suscriptors = Set<AnyCancellable>()
     
     // MARK: - init -
-    init(testing: Bool = false, hero: HeroeData?, series: [SingleSerieData]? = []) {
+    init(testing: Bool = false, hero: HeroeData?, series: VariousSerieData? = []) {
         if (testing){
             getFakeHeroandSeriesForDesignAndtesting()
             self.detailStatus = .loaded

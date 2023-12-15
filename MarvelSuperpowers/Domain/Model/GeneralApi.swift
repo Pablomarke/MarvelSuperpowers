@@ -25,10 +25,23 @@ struct Thumbnail: Decodable {
 }
 
 // MARK: - Items -
+typealias ApiItems = [ApiItem]
+
+struct ApiItem: Decodable {
+    let resourceURI: String
+    let name: String
+    
+    enum CodingKeys: String,
+                        CodingKey {
+        case resourceURI
+        case name
+    }
+}
+
 struct MarvelItem: Decodable {
     let available: Int
     let collectionURI: String
-    let items: [ApiItems]
+    let items: ApiItems
     let returned: Int
     
     enum CodingKeys: String,
@@ -40,14 +53,5 @@ struct MarvelItem: Decodable {
     }
 }
 
-struct ApiItems: Decodable {
-    let resourceURI: String
-    let name: String
-    
-    enum CodingKeys: String,
-                        CodingKey {
-        case resourceURI
-        case name
-    }
-}
+
 

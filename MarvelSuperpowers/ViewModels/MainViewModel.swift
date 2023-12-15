@@ -10,12 +10,12 @@ import Combine
 
 final class MainViewModel: ObservableObject {
     // MARK: - Properties -
-    @Published var heros: [HeroeData]?
+    @Published var heroes: HeroesData?
     @Published var MainStatus: Status = .loading
     var suscriptors = Set<AnyCancellable>()
     
     // MARK: - init -
-    init(testing: Bool = false, heros: [HeroeData]? = []){
+    init(testing: Bool = false, heros: HeroesData? = []){
         if (testing){
             getFakeHerosForDesignAndtesting()
             self.MainStatus = .loaded
@@ -49,7 +49,7 @@ final class MainViewModel: ObservableObject {
                         self.MainStatus = .loaded
                 }
             } receiveValue: { data in
-                self.heros = data.data.results
+                self.heroes = data.data.results
             }
             .store(in: &suscriptors)
     }
