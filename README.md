@@ -40,13 +40,12 @@ Siguiendo los principios SOLID, se ha procurado maximizar la separación de cód
 <img src="https://github.com/Pablomarke/GitImages/blob/main/marvelsuperpowers/Load.png" width="150" /><img src="https://github.com/Pablomarke/GitImages/blob/main/marvelsuperpowers/Error.png" width="150" />
 
 ## En desarrollo...
-#### Versión 1.15 (no implementada)
-- Ejecución multiplataforma Ipad, Apple Watch y macOS.
-
 #### Versión 1.2 (no implementada)
 - Paginado y acceso al 100% de los heroes proporcionados por la api.
 - Acceso desde el detalle al resto de datos proporcionados por la api.
 
+#### Versión 1.3 (no implementada)
+- Ejecución multiplataforma Ipad, Apple Watch y macOS.
 # Información extra
 ### Información Api
 
