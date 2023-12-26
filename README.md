@@ -18,7 +18,9 @@ La app está siendo desarrollada en swift nativo y se encuentra en fase de desar
 
 La aplicación ha sido desarrollada en SwiftUI, prescindiendo del uso de dependencias externas. Se ha implementado el patrón de diseño Modelo-Vista-ViewModel (MVVM) de manera integral en toda la aplicación. Cada vista experimenta cambios de estado gestionados mediante Combine, lo que facilita el manejo de la carga de datos después de la respuesta de la API obtenida a través de URLSession.
 En principio, se exhiben los primeros 20 héroes en una tabla en el menú principal.  Para próximas versiones se implementara el paginado de estos para poder acceder al total de estos.
+
 La elección de la paleta de colores se basa en los colores característicos de Marvel (rojo, blanco y negro). No obstante, se contempla la necesidad de modificarla en el futuro debido a problemas de legibilidad.
+
 La aplicación sigue un riguroso proceso de pruebas para cada vista y modelo. Se emplea una llamada mockeada con el objetivo de evitar el consumo de llamadas reales, optimizando así el rendimiento y asegurando un entorno controlado durante el desarrollo.
 Siguiendo los principios SOLID, se ha procurado maximizar la separación de código.
 
