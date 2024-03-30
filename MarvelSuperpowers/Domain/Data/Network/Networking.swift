@@ -11,7 +11,7 @@ final class Networking: NetworkingProtocol {
 
     // MARK: - Public properties -
     let marvelServer = "https://gateway.marvel.com"
-    let hash = "" ///Introduce tu Hash
+    let hash = "?ts=thesoer&apikey=01515cae6da0a0113d6269bc211e8fdd&hash=9a702ff5d9178eec6b3475a917573c7e" ///Introduce tu Hash
     
     // MARK: - Functions -
     func getSessionHero() -> URLRequest {
