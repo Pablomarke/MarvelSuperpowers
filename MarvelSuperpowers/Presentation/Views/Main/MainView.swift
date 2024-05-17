@@ -24,7 +24,5 @@ struct MainView: View {
 
 #Preview {
     MainView(viewModel: MainViewModel(testing: true))
-    //.environment(\.locale, .init(identifier: "es"))
-    
 }
 

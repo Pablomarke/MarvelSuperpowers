@@ -32,7 +32,6 @@ final class DetailViewModel: ObservableObject {
                 .tryMap{
                     guard let response = $0.response as? HTTPURLResponse,
                           response.statusCode == 200 else {
-                        //error
                         self.detailStatus = .error
                         throw URLError(.badServerResponse)
                     }
@@ -54,7 +53,6 @@ final class DetailViewModel: ObservableObject {
                     self.hero = hero
                 }
                 .store(in: &suscriptors)
-            
         }
     }
 }

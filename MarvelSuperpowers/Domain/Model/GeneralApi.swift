@@ -52,6 +52,3 @@ struct MarvelItem: Decodable {
         case returned
     }
 }
-
-
-

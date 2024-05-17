@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - Heroes response-
+// MARK: - Heroes response -
 struct CharacterResponse: Decodable {
     let code:Int
     let data: CharacterData

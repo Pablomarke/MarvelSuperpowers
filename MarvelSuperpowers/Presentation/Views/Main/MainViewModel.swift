@@ -15,8 +15,8 @@ final class MainViewModel: ObservableObject {
     var suscriptors = Set<AnyCancellable>()
     
     // MARK: - init -
-    init(testing: Bool = false, heros: HeroesData? = []){
-        if (testing){
+    init(testing: Bool = false, heros: HeroesData? = []) {
+        if (testing) {
             getFakeHerosForDesignAndtesting()
             self.MainStatus = .loaded
         } else {
@@ -25,7 +25,7 @@ final class MainViewModel: ObservableObject {
     }
     
     // MARK: - Functions -
-    func getMiHeros(){
+    func getMiHeros() {
         URLSession.shared
             .dataTaskPublisher(for: Networking().getSessionHero())
             .tryMap{
@@ -55,5 +55,3 @@ final class MainViewModel: ObservableObject {
             .store(in: &suscriptors)
     }
 }
-
-

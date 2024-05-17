@@ -21,7 +21,7 @@ struct DetailView: View {
                 VStack{
                     HStack{
                         ///Imagen
-                        AsyncImage(url: (viewModel.hero?.thumbnail?.thumbnailComplete())){ photo in
+                        AsyncImage(url: (viewModel.hero?.thumbnail?.thumbnailComplete())) { photo in
                             photo
                                 .resizable()
                                 .frame(width: 160, height: 160, alignment: .center)
@@ -35,7 +35,6 @@ struct DetailView: View {
                                 .opacity(0.8)
                         }
                         
-                        ///Descripción
                         if viewModel.hero?.description == "" {
                             Text( "No description available")
                                 .foregroundColor(Color.white)
@@ -80,6 +79,5 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView(viewModel: DetailViewModel(testing: true, hero: HeroeData(id: 1011334, name: "3-D Man", description: "Este heroe lo escogí por ser el primero. No lo conocen ni en su casa. Es el tipico que mientras está actuando aparece su madre y lo manda para casa", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg"), series: MarvelItem(available: 2, collectionURI: "", items: [ApiItem(resourceURI: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", name: "Serie 1")], returned: 2))))
-    
+    DetailView(viewModel: DetailViewModel(testing: true, hero: HeroeData(id: 1011334,name: "3-D Man", description: "Este heroe lo escogí por ser el primero. No lo conocen ni en su casa. Es el tipico que mientras está actuando aparece su madre y lo manda para casa", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg"), series: MarvelItem(available: 2, collectionURI: "", items: [ApiItem(resourceURI: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", name: "Serie 1")], returned: 2))))
 }

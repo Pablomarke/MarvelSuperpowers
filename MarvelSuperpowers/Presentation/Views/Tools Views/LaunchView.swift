@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LaunchView: View {
-    
     //MARK: - View -
     var body: some View {
         ZStack{
@@ -16,7 +15,6 @@ struct LaunchView: View {
                 .resizable()
                .edgesIgnoringSafeArea(.all)
             ZStack{
-                
                 VStack{
                     Spacer()
                     ProgressView()

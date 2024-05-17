@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct HeroRowView: View {
-    
     var hero: HeroeData
     
     //MARK: - View -
     var body: some View {
         ZStack{
-            //Imagen del heroe
             AsyncImage(url:  (hero.thumbnail?.thumbnailComplete())){ photo in
                 photo
                     .resizable()
@@ -32,7 +30,6 @@ struct HeroRowView: View {
             .background(.clear)
             
             VStack{
-                //name
                 Spacer()
                 HStack{
                     Spacer()
@@ -52,12 +49,6 @@ struct HeroRowView: View {
         }
     }
 }
-
-/*
-#Preview {
-    HeroRowView(hero: HeroeData(id: 1011334, name: "3-D Man", description: "", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", extension2: "jpg"), series: Series(available: 2, collectionURI: "", items: [ApiItems(resourceURI: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", name: "Serie 1")], returned: 2)))
-    
-}*/
 
 struct HeroRowView_Preview: PreviewProvider {
     static var previews: some View {

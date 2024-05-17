@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ErrorView: View {
-    
     //MARK: - View -
     var body: some View {
         VStack{
@@ -29,10 +28,8 @@ struct ErrorView: View {
             .resizable()
         .opacity(0.8)
         .edgesIgnoringSafeArea(.all)
-        
         )
     }
-        
 }
 
 #Preview {

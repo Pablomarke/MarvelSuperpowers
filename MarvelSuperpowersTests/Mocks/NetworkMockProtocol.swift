@@ -8,8 +8,7 @@
 import Foundation
 @testable import MarvelSuperpowers
 
-// MARK: - Clase para hacer un networking mock -
-
+// MARK: - Class for networking mock -
 class NetworkingMock: NetworkingMockProtocol {
     private var mockData: Data?
     private var mockResponse: URLResponse?
@@ -21,7 +20,7 @@ class NetworkingMock: NetworkingMockProtocol {
         mockError = error
     }
     
-// MARK: - Funciones que devuelven una URLRequest falsa -
+// MARK: - Functions for false request -
     func getSessionHero() -> URLRequest {
         let urlHeroes = URLRequest(url: URL(string: "http://MarvelApiexample.com/mock")!)
         return urlHeroes

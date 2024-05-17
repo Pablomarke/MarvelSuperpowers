@@ -8,10 +8,9 @@
 import Foundation
 
 final class Networking: NetworkingProtocol {
-
     // MARK: - Public properties -
     let marvelServer = "https://gateway.marvel.com"
-    let hash = "?ts=thesoer&apikey=01515cae6da0a0113d6269bc211e8fdd&hash=9a702ff5d9178eec6b3475a917573c7e" ///Introduce tu Hash
+    let hash = "?ts=thesoer&apikey=01515cae6da0a0113d6269bc211e8fdd&hash=9a702ff5d9178eec6b3475a917573c7e"
     
     // MARK: - Functions -
     func getSessionHero() -> URLRequest {
@@ -24,12 +23,8 @@ final class Networking: NetworkingProtocol {
     
     func getSessionSerie(id: Int) -> URLRequest {
         let urlSeries = "\(marvelServer)\(endpoint.allCharacters)/\(id)/\(endpoint.series)\(hash)"
-        
         var request = URLRequest(url: URL(string: urlSeries)!)
         request.httpMethod = HTTPMethods.get
         return request
     }
 }
-
-
-

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HeroesSubView: View {
-    
     @StateObject var viewModel: MainViewModel
     
     var body: some View {
@@ -17,7 +16,6 @@ struct HeroesSubView: View {
                 if let heros = viewModel.heroes{
                     ForEach(heros){ data in
                         NavigationLink {
-                            //destino a detalle
                             DetailView(viewModel: DetailViewModel( hero: data))
                         } label : {
                             HeroRowView(hero: data)
@@ -26,7 +24,8 @@ struct HeroesSubView: View {
                     }
                 }
             }
-            .navigationBarTitle("Heroes and villains").tint(Color.clear)
+            .navigationBarTitle("Heroes and villains")
+            .tint(Color.clear)
             .padding()
             .ignoresSafeArea(edges: .bottom)
             .background(Image("redwall")

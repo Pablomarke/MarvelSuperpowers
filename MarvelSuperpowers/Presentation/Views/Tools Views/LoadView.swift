@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LoadView: View {
-    
     //MARK: - View -
     var body: some View {
         VStack{

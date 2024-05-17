@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct DetailRowView: View {
-    
     var model: SingleSerieData
     
     var body: some View {
         ZStack{
-            ///Imagen
             AsyncImage(url: model.thumbnail?.thumbnailComplete()){ photo in
                 photo
                     .resizable()
@@ -29,7 +27,6 @@ struct DetailRowView: View {
             }
             .background(.clear)
             VStack{
-                ///Nombre
                 Spacer()
                 HStack{
                     Spacer()
