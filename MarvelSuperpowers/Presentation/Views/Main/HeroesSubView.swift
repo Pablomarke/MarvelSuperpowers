@@ -11,30 +11,30 @@ struct HeroesSubView: View {
     @StateObject var viewModel: MainViewModel
     
     var body: some View {
-        NavigationStack {
-            ScrollView{
-                if let heros = viewModel.heroes{
-                    ForEach(heros){ data in
-                        NavigationLink {
-                            DetailView(viewModel: DetailViewModel( hero: data))
-                        } label : {
-                            HeroRowView(hero: data)
-                                .frame(height: 224)
+        VStack {
+            NavigationStack {
+                ScrollView {
+                    if let heros = viewModel.heroes{
+                        ForEach(heros) { data in
+                            NavigationLink {
+                                DetailView(viewModel: DetailViewModel( hero: data))
+                            } label : {
+                                HeroRowView(hero: data)
+                            }
                         }
                     }
                 }
+                .padding()
+                .ignoresSafeArea(edges: .bottom)
+                .background(Image("redwall")
+                    .opacity(0.6)
+                    .edgesIgnoringSafeArea(.all))
+                .navigationBarTitle("Heroes and villains")
             }
-            .navigationBarTitle("Heroes and villains")
-            .tint(Color.clear)
-            .padding()
-            .ignoresSafeArea(edges: .bottom)
-            .background(Image("redwall")
-                .resizable()
-                .opacity(0.8)
-                .edgesIgnoringSafeArea(.all))
         }
     }
 }
+
 
 #Preview {
     HeroesSubView(viewModel: MainViewModel(testing: true))

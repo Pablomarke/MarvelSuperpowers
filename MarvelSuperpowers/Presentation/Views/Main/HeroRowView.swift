@@ -12,41 +12,25 @@ struct HeroRowView: View {
     
     //MARK: - View -
     var body: some View {
-        ZStack{
-            AsyncImage(url:  (hero.thumbnail?.thumbnailComplete())){ photo in
+        HStack {
+            Text(hero.name ?? "")
+                .font(.title)
+                .frame(width: 120)
+                .foregroundStyle(.white)
+                .padding()
+            AsyncImage(url: (hero.thumbnail?.thumbnailComplete())) { photo in
                 photo
                     .resizable()
-                    .frame(height: 224)
-                    .frame(maxWidth: .infinity)
                     .scaledToFit()
                     .cornerRadius(30)
-                    .opacity(0.9)
             } placeholder: {
                 Image(systemName: "photo")
-                    .resizable()
-                    .cornerRadius(20)
-                    .opacity(0.8)
             }
-            .background(.clear)
-            
-            VStack{
-                Spacer()
-                HStack{
-                    Spacer()
-                    Text(hero.name ?? "")
-                        .font(.title2)
-                        .foregroundStyle(.black)
-                        .padding([.leading, .trailing],20)
-                        .frame(maxWidth: .infinity)
-                    
-                }
-                .frame( height: 40)
-                .background(.gray)
-                .cornerRadius(20)
-                .opacity(0.9)
-                
-            }
+            .padding()
         }
+        .frame(width: 320, height: 160)
+        .background(Color.white.opacity(0.4))
+        .cornerRadius(30)
     }
 }
 
